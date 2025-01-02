@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui"; // Import DaisyUI using ES module syntax
 
 export default {
   content: [
@@ -14,5 +15,9 @@ export default {
       },
     },
   },
-  plugins: [],
+  darkMode: "class", // Enable dark mode using classes
+  plugins: [daisyui], // Use the imported DaisyUI plugin
+  daisyui: {
+    themes: true, // Enable all themes
+  },
 } satisfies Config;
