@@ -8,7 +8,7 @@ export default function Home() {
         subtitle="Capture these thoughts"
         backgroundImage="/images/hero-image.jpg" 
         buttonLabel="Create a note"
-        buttonUrl="/notes/new"
+        buttonUrl="/notes/"
       />
     </div>
   );
