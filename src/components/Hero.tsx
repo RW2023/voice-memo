@@ -5,10 +5,11 @@ interface HeroProps {
     subtitle: string;
     backgroundImage: string;
     buttonLabel?: string;
+    buttonUrl?: string;
     onButtonClick?: () => void;
 }
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle, backgroundImage, buttonLabel, onButtonClick }) => {
+const Hero: React.FC<HeroProps> = ({ title, subtitle, backgroundImage, buttonLabel, buttonUrl, onButtonClick }) => {
     const heroStyle = {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -26,9 +27,11 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, backgroundImage, buttonLab
                     <h1 className="mb-5 text-5xl font-bold">{title}</h1>
                     <p className="mb-5">{subtitle}</p>
                     {buttonLabel && (
-                        <button className="btn btn-primary" onClick={onButtonClick}>
-                            {buttonLabel}
-                        </button>
+                        <a href={buttonUrl}>
+                            <button className="btn btn-primary" onClick={onButtonClick}>
+                                {buttonLabel}
+                            </button>
+                        </a>
                     )}
                 </div>
             </div>
