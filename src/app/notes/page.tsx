@@ -1,6 +1,6 @@
 'use client';
-import { FC, useEffect, useState } from "react";
-import { supabase } from "../../utils/supabaseClient";
+import { FC, useEffect, useState, JSX } from "react";
+import { supabase } from "@/utils/supabaseClient";
 import AudioRecorder from "@/components/AudioRecorder";
 
 interface AudioNote {
